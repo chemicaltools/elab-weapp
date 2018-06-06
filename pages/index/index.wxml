@@ -1,0 +1,86 @@
+<!--index.wxml-->
+<view class='center' style='flex-direction:row;align-items:center;height:60px;background:white;'>
+  <view style="width: 80%;">
+    <image style=" height: 30px; background-color: #eeeeee;width:100%;" src="http://finding-1251553053.cossh.myqcloud.com/guangchang/input.png" />
+    <input style="margin-top: -30px;margin-left:5px;width: 100%;" placeholder="请输入试剂名称/地点" value="{{input}}" bindinput="update" data-name="input" id="input" />
+  </view>
+  <navigator url="../information/information?list=search&input={{input}}">
+    <image style="width: 25px; height: 25px;margin-left:5px;" src="http://finding-1251553053.cossh.myqcloud.com/guangchang/search.png" />
+  </navigator>
+</view>
+
+<view class="container">
+  <view class="title" style="display:flex;flex-direction:row;align-items:center;">
+    <view class="userinfo">
+      <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+      <block wx:else>
+        <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      </block>
+    </view>
+    <view class="groupinfo">
+      <text class="userinfo-nickname">当前小组：{{groupName}}</text>
+    </view>
+  </view>
+  <view class="announcement" style='align-items:center;'>
+    <swiper class="swiper_container" vertical="true" autoplay="true" circular="true" interval="2000">
+      <block wx:for="{{todos}}" wx:for-item="todo" wx:key="objectId">
+        <navigator url="../announcement/announcement" open-type="switchTab">
+          <swiper-item>
+            <view class="swiper_item">{{todo.content}}</view>
+          </swiper-item>
+        </navigator>
+      </block>
+    </swiper>
+  </view>
+  <view class="center" style='flex-direction:row;align-items:center;margin-top:10px;margin-left:5px;'>
+    <view style="width:50%">
+      <navigator url="../usermanage/usermanage">
+        <view class="center">
+          <image style="width: 125px; height: 125px;" src="	http://finding-1251553053.cossh.myqcloud.com/security/%E5%9B%BE%E7%89%871.png"></image>
+        </view>
+        <text class="center">用户管理</text>
+      </navigator>
+    </view>
+
+    <view style="width:50%">
+      <navigator url="../reagentGet/reagentGet">
+        <view class="center">
+          <image style="width: 87px; height: 125px;" src="	http://finding-1251553053.cossh.myqcloud.com/security/%E5%9B%BE%E7%89%873.png"></image>
+        </view>
+        <text class="center">试剂领用</text>
+      </navigator>
+    </view>
+  </view>
+  <view class="center" style='flex-direction:row;align-items:center;margin-top:10px;margin-left:5px;'>
+    <view style="width:50%">
+      <navigator url="../information/information">
+        <view class="center">
+          <image style="width: 125px; height: 125px; " src="http://finding-1251553053.cossh.myqcloud.com/security/%E5%9B%BE%E7%89%874.png"></image>
+        </view>
+        <text class="center">信息查询</text>
+      </navigator>
+    </view>
+  </view>
+
+  <view class="center" style='flex-direction:row;align-items:center;margin-top:10px;margin-left:5px;'>
+    <view style="width:50%">
+      <navigator url="../reagentAdd/reagentAdd">
+        <view class="center">
+          <image style="width: 125px; height: 125px;" src="	http://finding-1251553053.cossh.myqcloud.com/security/%E5%9B%BE%E7%89%875.png"></image>
+        </view>
+        <text class="center">试剂添加</text>
+      </navigator>
+    </view>
+
+    <view style="width:50%">
+      <navigator url="../shop/shop">
+        <view class="center">
+          <image style="width: 125px; height: 125px;" src="	http://finding-1251553053.cossh.myqcloud.com/security/%E5%9B%BE%E7%89%876.png"></image>
+        </view>
+        <text class="center">试剂购买</text>
+      </navigator>
+    </view>
+  </view>
+
+</view>

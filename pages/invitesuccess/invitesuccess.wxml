@@ -1,0 +1,2 @@
+<!--pages/invitesuccess/invitesuccess.wxml-->
+<text>{{error}}</text>

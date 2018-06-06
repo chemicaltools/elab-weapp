@@ -1,0 +1,29 @@
+<!--pages/chat/chat.wxml-->
+
+<scroll-view style="flex:1;">
+  <view class="todo-list" >
+    <block wx:for="{{messages}}" wx:for-item="todo" wx:key="objectId">
+      <view class="flex-wrap todo">
+        <view class="center" style="width:150rpx">
+          <view wx:if="{{todo.from!=from.objectId}}" style="margin-top:50rpx;">
+            <image style="width:120rpx;height:120rpx;border-radius: 50%;" src="{{touser.avatarUrl}}" />
+          </view>
+        </view>
+        <view style="vertical-align:top;margin-left:5px;width:450rpx;{{todo.from==from.objectId?'text-align:right;':''}}">
+          <text data-id="{{todo.objectId}}" class="todo-text tappable">
+      {{todo.text}}
+      </text>
+        </view>
+        <view class="center" style="width:150rpx;">
+          <view wx:if="{{todo.from==from.objectId}}" style="margin-top:50rpx;">
+            <image style="width:120rpx;height:120rpx;border-radius: 50%;" src="{{from.avatarUrl}}" />
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</scroll-view>
+<view class="flex-wrap header" style="position: fixed;bottom:{{isIpx?'72rpx':'0'}};width: 100%;">
+  <textarea auto-height placeholder="发送消息" bindinput="updateDraft" value="{{draft}}" fixed class="new-todo" style="position: fixed;overflow-y:hidden;overflow-x:hidden;border:0;fixed：<textarea fixed>;" />
+  <text style="display: {{draft ? 'inline': 'none'}};position: absolute; right:0;" class="add tappable" ontap="addTodo">发送</text>
+</view>

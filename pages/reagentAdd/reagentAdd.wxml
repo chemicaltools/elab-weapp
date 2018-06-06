@@ -1,0 +1,23 @@
+<!--pages/reagentAdd/reagentAdd.wxml-->
+<view class="container">
+  <view class="form-wrap">
+    <view class="flex-wrap input-wrap">
+      <text class="label">名称</text>
+      <input value="{{name}}" bindinput="updateName" id="name" class="account-info-input"/>
+    </view>
+    <view class="flex-wrap input-wrap">
+      <text class="label">公司</text>
+      <input value="{{company}}" bindinput="updateCompany" id="compony" class="account-info-input"/>
+    </view>
+        <view class="flex-wrap input-wrap">
+      <text class="label">地点</text>
+      <input value="{{place}}" bindinput="updatePlace" id="place" class="account-info-input"/>
+    </view>
+        <view class="flex-wrap input-wrap">
+      <text class="label">规格</text>
+      <input value="{{number}}" bindinput="updateNumber" id="number" class="account-info-input" type="digit"/>
+    </view>
+  </view>
+  <text wx:if="{{error}}" class="error">{{error}}</text>
+  <button class="submit" type="primary" disabled="{{!(name && company && place && number)}}" bindtap="save">添加</button>
+</view>

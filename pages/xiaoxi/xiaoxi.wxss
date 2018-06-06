@@ -1,0 +1,4 @@
+/* pages/xiaoxi/xiaoxi.wxss */
+page{
+  background-image: url('http://finding-1251553053.cossh.myqcloud.com/security/%E5%9B%BE%E7%89%872.png');background-repeat: no-repeat;background-size:cover;
+}

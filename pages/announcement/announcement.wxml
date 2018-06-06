@@ -1,0 +1,17 @@
+<!--pages/announcement/announcement.wxml-->
+<view class="flex-wrap header" wx:if="{{isAdministrator}}">
+  <textarea auto-height placeholder="发布公告" bindinput="updateDraft" value="{{draft}}" class="new-todo" style="overflow-y:hidden;overflow-x:hidden;border:0;" />
+  <text style="display: {{draft ? 'inline': 'none'}}" class="add tappable" ontap="addTodo">添加</text>
+</view>
+<view class="todo-list">
+  <block wx:for="{{todos}}" wx:for-item="todo" wx:key="objectId">
+    <view class="flex-wrap todo">
+      <text wx:if="{{!isAdministrator||todo.objectId != editedTodo.objectId}}" data-id="{{todo.objectId}}" class="todo-text tappable" ontap="editTodo">
+      {{todo.content}}
+    </text>
+      <textarea wx:if="{{todo.objectId == editedTodo.objectId&&isAdministrator}}" data-id="{{todo.objectId}}" value="{{todo.content}}" auto-focus auto-height stle="overflow-y:hidden;overflow-x:hidden;border:0;" bindinput="updateEditedContent" bindblur="doneEdit"
+        class="todo-input" />
+      <icon type="clear" size="20" data-id="{{todo.objectId}}" wx:if="{{isAdministrator}}" ontap="deleteTodo" />
+    </view>
+  </block>
+</view>

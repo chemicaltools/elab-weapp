@@ -1,0 +1,23 @@
+<!--pages/xiaoxi/xiaoxi.wxml-->
+<!--pages/shetuan/shetuan.wxml-->
+  <view class="todo-list">
+    <block wx:for="{{todos}}" wx:for-item="todo" wx:key="objectId">
+      <navigator url="../chat/chat?username={{todo.members}}" wx:if="{{todo.message}}">
+        <view class="flex-wrap todo">
+          <view style="margin-top:50rpx;">
+            <image style="width:120rpx;height:120rpx;border-radius: 50%;" src="{{todo.message.from==todo.members?todo.message.attributes.send_url:todo.message.attributes.to_url}}" />
+          </view>
+          <view style="vertical-align:top;margin-left:5px;">
+            <text data-id="{{todo.objectId}}" class="todo-text tappable">
+      {{todo.message.from==todo.members?todo.message.attributes.send_nickname:todo.message.attributes.to_nickname}}
+      {{todo.message.text}}
+      </text>
+          </view>
+          <!--<view style="position: fixed;right:20px;">
+      <image style="width:120rpx;height:50rpx;" wx:if="{{todo.school==1}}" src="http://finding-1251553053.cossh.myqcloud.com/shetuan/ecnu.png"/>
+      <image style="width:120rpx;height:50rpx;" wx:elif="{{todo.school==2}}" src="http://finding-1251553053.cossh.myqcloud.com/shetuan/sjtu.png"/>
+    </view>-->
+        </view>
+      </navigator>
+    </block>
+  </view>

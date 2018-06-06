@@ -1,0 +1,21 @@
+<!--pages/my/my.wxml-->
+<view class="title navigator user" style="margin-top: 23px;height:92px;line-height:30px;display:flex;flex-direction:row;align-items:center;">
+    <view class="userinfo">
+      <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+      <block wx:else>
+        <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      </block>
+    </view>
+    <view class="groupinfo">
+      <text class="userinfo-nickname">{{userInfo.nickName}}\n</text>
+      <text class="userinfo-nickname">当前小组：{{groupName}}</text>
+    </view>
+  </view>
+<navigator url="../user/user" class="navigator user" style="margin-top: 23px;"><image style="width: 20px; height: 20px;margin-top: 10px;margin-left: 5px;margin-right: 5px;" src="	http://finding-1251553053.cossh.myqcloud.com/security/ZHDL.png"></image>账户登录</navigator>
+<navigator url="../creategroup/creategroup" class="navigator user" style="margin-top: 23px;"><image style="width: 20px; height: 20px;margin-top: 10px;margin-left: 5px;margin-right: 5px;" src="	http://finding-1251553053.cossh.myqcloud.com/security/CJXZ.png"></image>创建小组</navigator>
+<button open-type="share" class="navigator user" style="text-align:left"><image style="width: 20px; height: 20px;margin-top: 10px;margin-left: 5px;margin-right: 5px;" src="	http://finding-1251553053.cossh.myqcloud.com/security/YQZY.png"></image>邀请组员</button>
+<navigator url="../groupchange/groupchange" class="navigator user"><image style="width: 20px; height: 20px;margin-top: 10px;margin-left: 5px;margin-right: 5px;" src="	http://finding-1251553053.cossh.myqcloud.com/security/QHXZ.png"></image>切换小组</navigator>
+<button wx:if="{{!isAdministrator}}" bindtap="exitGroup" class="navigator user" style="text-align:left"><image style="width: 20px; height: 20px;margin-top: 10px;margin-left: 5px;margin-right: 5px;" src="	http://finding-1251553053.cossh.myqcloud.com/security/%E5%8C%96%E5%AD%A6e%2B.png"></image>退出小组</button>
+<button open-type="contact"  class="navigator user" style="text-align:left;margin-top: 23px;"><image style="width: 20px; height: 20px;margin-top: 10px;margin-left: 5px;margin-right: 5px;" src="	http://finding-1251553053.cossh.myqcloud.com/security/FKYJ.png"></image>反馈意见</button>
+<button bindtap="chemicaltools" class="navigator user" style="text-align:left"><image style="width: 20px; height: 20px;margin-top: 10px;margin-left: 5px;margin-right: 5px;" src="	https://www.zgchemicals.mobi/images/ic_launcher.png"></image>化学e+</button>
+<navigator url="../qrcode/qrcode" class="navigator user" style="text-align:left"><image style="width: 20px; height: 20px;margin-top: 10px;margin-left: 5px;margin-right: 5px;" src="	https://i.loli.net/2018/04/10/5accccbfc347f.png"></image>Color App</navigator>

@@ -1,0 +1,26 @@
+<!--pages/information/information.wxml-->
+<view class="todo-list">
+  <block wx:for="{{todos}}" wx:for-item="todo" wx:key="objectId">
+    <navigator url="../chat/chat?username={{todo.user.objectId}}">
+      <view class="flex-wrap todo" style="  display: flex;flex-direction: row;justify-content:space-between;">
+        <view style='width:70rpx'>
+          <image src="{{todo.user.avatarUrl}}" background-size="cover" style="width:64rpx;height:64rpx;margin:20rpx;border-radius: 50%;" />
+        </view>
+        <view>
+          <text wx:if="{{todo.objectId != editedTodo.objectId}}" data-id="{{todo.objectId}}" class="todo-text tappable">{{todo.user.nickName}}</text>
+        </view>
+        <view style='width:160rpx'>
+          <text wx:if="{{todo.isAdministrator}}" style="width:96px">管理员</text>
+          <text wx:if="{{!todo.isAdministrator}}" style="width:96px">普通用户</text>
+        </view>
+        <view style='width:256rpx' wx:if="{{user.group.administrator.objectId==user.objectId}}">
+          <button data-id="{{todo.objectId}}" data-work="add" wx:if="{{!todo.isAdministrator&&todo.user.objectId!=user.objectId}}" bindtap="setAdministrator">设为管理员</button>
+          <button data-id="{{todo.objectId}}" data-work="delete" wx:if="{{todo.isAdministrator&&todo.user.objectId!=user.objectId&&user.group.administrator.objectId!=todo.user.objectId}}" bindtap="setAdministrator">取消管理员</button>
+        </view>
+        <view style='width:20px' wx:if="{{isAdministrator}}">
+          <icon type="clear" size="20" data-id="{{todo.objectId}}" wx:if="{{(!todo.isAdministrator||user.group.administrator.objectId==user.objectId)&&todo.user.objectId!=user.objectId}}" ontap="deleteTodo" />
+        </view>
+      </view>
+    </navigator>
+  </block>
+</view>

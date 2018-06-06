@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/my/my",
+    "pages/user/user",
+    "pages/creategroup/creategroup",
+    "pages/invitesuccess/invitesuccess",
+    "pages/reagentAdd/reagentAdd",
+    "pages/reagentGet/reagentGet",
+    "pages/announcement/announcement",
+    "pages/information/information",
+    "pages/usermanage/usermanage",
+    "pages/groupchange/groupchange",
+    "pages/shop/shop",
+    "pages/chat/chat",
+    "pages/xiaoxi/xiaoxi",
+    "pages/qrcode/qrcode"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "智Lab",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/guangchang2.png",
+        "selectedIconPath": "images/guangchang.png"
+      },
+      {
+        "pagePath": "pages/announcement/announcement",
+        "text": "公告",
+        "iconPath": "images/shetuan2.png",
+        "selectedIconPath": "images/shetuan.png"
+      },
+      {
+        "pagePath": "pages/xiaoxi/xiaoxi",
+        "text": "消息",
+        "iconPath": "images/xiaoxi2.png",
+        "selectedIconPath": "images/xiaoxi.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/geren2.png",
+        "selectedIconPath": "images/geren.png"
+      }
+    ],
+    "backgroundColor": "#ADD8E6",
+    "color": "#FFFAF0",
+    "selectedColor": "#8B2323"
+  }
+}

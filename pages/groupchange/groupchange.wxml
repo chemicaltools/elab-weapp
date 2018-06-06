@@ -1,0 +1,4 @@
+<!--pages/groupchange/groupchange.wxml-->
+<block wx:for="{{todos}}" wx:for-item="todo" wx:key="objectId">
+  <button data-id="{{todo.group.objectId}}" bindtap="change" class="navigator user">{{todo.group.name}}</button>
+</block>
