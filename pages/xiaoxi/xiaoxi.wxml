@@ -13,10 +13,6 @@
       {{todo.message.text}}
       </text>
           </view>
-          <!--<view style="position: fixed;right:20px;">
-      <image style="width:120rpx;height:50rpx;" wx:if="{{todo.school==1}}" src="http://finding-1251553053.cossh.myqcloud.com/shetuan/ecnu.png"/>
-      <image style="width:120rpx;height:50rpx;" wx:elif="{{todo.school==2}}" src="http://finding-1251553053.cossh.myqcloud.com/shetuan/sjtu.png"/>
-    </view>-->
         </view>
       </navigator>
     </block>

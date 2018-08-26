@@ -1,11 +1,11 @@
 <!--index.wxml-->
 <view class='center' style='flex-direction:row;align-items:center;height:60px;background:white;'>
   <view style="width: 80%;">
-    <image style=" height: 30px; background-color: #eeeeee;width:100%;" src="http://finding-1251553053.cossh.myqcloud.com/guangchang/input.png" />
+    <image style=" height: 30px; background-color: #eeeeee;width:100%;" src="https://i.loli.net/2018/08/26/5b82707c49e39.png" />
     <input style="margin-top: -30px;margin-left:5px;width: 100%;" placeholder="请输入试剂名称/地点" value="{{input}}" bindinput="update" data-name="input" id="input" />
   </view>
   <navigator url="../information/information?list=search&input={{input}}">
-    <image style="width: 25px; height: 25px;margin-left:5px;" src="http://finding-1251553053.cossh.myqcloud.com/guangchang/search.png" />
+    <image style="width: 25px; height: 25px;margin-left:5px;" src="https://i.loli.net/2018/08/26/5b82708b69185.png" />
   </navigator>
 </view>
 
@@ -37,7 +37,7 @@
     <view style="width:50%">
       <navigator url="../usermanage/usermanage">
         <view class="center">
-          <image style="width: 125px; height: 125px;" src="	http://finding-1251553053.cossh.myqcloud.com/security/%E5%9B%BE%E7%89%871.png"></image>
+          <image style="width: 125px; height: 125px;" src="https://i.loli.net/2018/08/26/5b82709d922a9.png"></image>
         </view>
         <text class="center">用户管理</text>
       </navigator>
@@ -46,7 +46,7 @@
     <view style="width:50%">
       <navigator url="../reagentGet/reagentGet">
         <view class="center">
-          <image style="width: 87px; height: 125px;" src="	http://finding-1251553053.cossh.myqcloud.com/security/%E5%9B%BE%E7%89%873.png"></image>
+          <image style="width: 87px; height: 125px;" src="https://i.loli.net/2018/08/26/5b8270ab56984.png"></image>
         </view>
         <text class="center">试剂领用</text>
       </navigator>
@@ -56,7 +56,7 @@
     <view style="width:50%">
       <navigator url="../information/information">
         <view class="center">
-          <image style="width: 125px; height: 125px; " src="http://finding-1251553053.cossh.myqcloud.com/security/%E5%9B%BE%E7%89%874.png"></image>
+          <image style="width: 125px; height: 125px; " src="https://i.loli.net/2018/08/26/5b8270be71775.png"></image>
         </view>
         <text class="center">信息查询</text>
       </navigator>
@@ -67,7 +67,7 @@
     <view style="width:50%">
       <navigator url="../reagentAdd/reagentAdd">
         <view class="center">
-          <image style="width: 125px; height: 125px;" src="	http://finding-1251553053.cossh.myqcloud.com/security/%E5%9B%BE%E7%89%875.png"></image>
+          <image style="width: 125px; height: 125px;" src="https://i.loli.net/2018/08/26/5b8270d06fb46.png"></image>
         </view>
         <text class="center">试剂添加</text>
       </navigator>
@@ -76,7 +76,7 @@
     <view style="width:50%">
       <navigator url="../shop/shop">
         <view class="center">
-          <image style="width: 125px; height: 125px;" src="	http://finding-1251553053.cossh.myqcloud.com/security/%E5%9B%BE%E7%89%876.png"></image>
+          <image style="width: 125px; height: 125px;" src="https://i.loli.net/2018/08/26/5b8270e1ec4ed.png"></image>
         </view>
         <text class="center">试剂购买</text>
       </navigator>
