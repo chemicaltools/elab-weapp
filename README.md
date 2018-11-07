@@ -20,3 +20,4 @@ Use WeChat to scan the Mini Program Code:
 
 ## Funds
 * 华东师范大学2018年度本科生创新创业训练培育项目（[2018PY-215](http://www.cxcy.ecnu.edu.cn/s/463/t/1203/93/6b/info168811.htm)）
+* 2019 Shanghai College Students Innovation and Entrepreneurship Planning Program (2019年度上海市大学生创新创业训练计划项目)
