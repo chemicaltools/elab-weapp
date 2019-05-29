@@ -13,6 +13,7 @@ Use WeChat to scan the Mini Program Code:
 
 ## Awards
 * The Third Prize in 2018 East China Normal University Computer Application Competition (2018年华东师范大学计算机应用能力大赛三等奖)
+* The Third Prize in 2019 East China Normal University Computer Application Competition (2019年华东师范大学计算机应用能力大赛三等奖)
 
 ## Funds
 * 华东师范大学2018年度本科生创新创业训练培育项目（[2018PY-215](http://www.cxcy.ecnu.edu.cn/s/463/t/1203/93/6b/info168811.htm)）
