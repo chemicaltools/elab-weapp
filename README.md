@@ -3,10 +3,6 @@
 
 A laboratory safety management platform on WeChat.
 
-**Author**: Jinzhe Zeng
-
-**Email**: jzzeng@stu.ecnu.edu.cn
-
 ## Usage
 Use WeChat to scan the Mini Program Code:
 
